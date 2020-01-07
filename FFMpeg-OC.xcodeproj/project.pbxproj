@@ -29,6 +29,16 @@
 		1C69EC9623BF34E60035C966 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69EC9523BF34E60035C966 /* CoreMedia.framework */; };
 		1C69EC9823BF34F30035C966 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69EC9723BF34F30035C966 /* VideoToolbox.framework */; };
 		1C69EC9A23BF34FA0035C966 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C69EC9923BF34F90035C966 /* AVFoundation.framework */; };
+		1C69ED4223C416420035C966 /* ffmpeg_opt.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED3623C416420035C966 /* ffmpeg_opt.c */; };
+		1C69ED4323C416420035C966 /* ffmpeg.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED3823C416420035C966 /* ffmpeg.c */; };
+		1C69ED4423C416420035C966 /* ffplay.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED3923C416420035C966 /* ffplay.c */; };
+		1C69ED4523C416420035C966 /* ffmpeg_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED3A23C416420035C966 /* ffmpeg_filter.c */; };
+		1C69ED4623C416420035C966 /* ffmpeg_cuvid.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED3B23C416420035C966 /* ffmpeg_cuvid.c */; };
+		1C69ED4723C416420035C966 /* ffmpeg_hw.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED3C23C416420035C966 /* ffmpeg_hw.c */; };
+		1C69ED4823C416420035C966 /* ffprobe.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED3D23C416420035C966 /* ffprobe.c */; };
+		1C69ED4923C416420035C966 /* ffmpeg_qsv.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED3E23C416420035C966 /* ffmpeg_qsv.c */; };
+		1C69ED4A23C416420035C966 /* ffmpeg_videotoolbox.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED4023C416420035C966 /* ffmpeg_videotoolbox.c */; };
+		1C69ED4B23C416420035C966 /* cmdutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C69ED4123C416420035C966 /* cmdutils.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,19 +203,19 @@
 		1C69EC9523BF34E60035C966 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		1C69EC9723BF34F30035C966 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		1C69EC9923BF34F90035C966 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		1C69ECB223BF35C10035C966 /* cmdutils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cmdutils.h; sourceTree = "<group>"; };
-		1C69ECB323BF35C10035C966 /* ffmpeg_opt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffmpeg_opt.c; sourceTree = "<group>"; };
-		1C69ECB723BF35C10035C966 /* ffmpeg_cuvid.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffmpeg_cuvid.c; sourceTree = "<group>"; };
-		1C69ECB823BF35C10035C966 /* ffmpeg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ffmpeg.h; sourceTree = "<group>"; };
-		1C69ECB923BF35C10035C966 /* ffplay.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffplay.c; sourceTree = "<group>"; };
-		1C69ECBB23BF35C10035C966 /* ffmpeg_filter.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffmpeg_filter.c; sourceTree = "<group>"; };
-		1C69ECBC23BF35C10035C966 /* ffmpeg_hw.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffmpeg_hw.c; sourceTree = "<group>"; };
-		1C69ECBD23BF35C10035C966 /* ffprobe.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffprobe.c; sourceTree = "<group>"; };
-		1C69ECBE23BF35C10035C966 /* cmdutils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cmdutils.c; sourceTree = "<group>"; };
-		1C69ECBF23BF35C10035C966 /* ffmpeg_qsv.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffmpeg_qsv.c; sourceTree = "<group>"; };
-		1C69ECC023BF35C10035C966 /* ffmpeg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffmpeg.c; sourceTree = "<group>"; };
-		1C69ECC123BF35C10035C966 /* ffmpeg_videotoolbox.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ffmpeg_videotoolbox.c; sourceTree = "<group>"; };
 		1C69ECC323BF35F60035C966 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		1C69ED3623C416420035C966 /* ffmpeg_opt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffmpeg_opt.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffmpeg_opt.c"; sourceTree = "<group>"; };
+		1C69ED3723C416420035C966 /* ffmpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ffmpeg.h; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffmpeg.h"; sourceTree = "<group>"; };
+		1C69ED3823C416420035C966 /* ffmpeg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffmpeg.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffmpeg.c"; sourceTree = "<group>"; };
+		1C69ED3923C416420035C966 /* ffplay.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffplay.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffplay.c"; sourceTree = "<group>"; };
+		1C69ED3A23C416420035C966 /* ffmpeg_filter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffmpeg_filter.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffmpeg_filter.c"; sourceTree = "<group>"; };
+		1C69ED3B23C416420035C966 /* ffmpeg_cuvid.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffmpeg_cuvid.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffmpeg_cuvid.c"; sourceTree = "<group>"; };
+		1C69ED3C23C416420035C966 /* ffmpeg_hw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffmpeg_hw.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffmpeg_hw.c"; sourceTree = "<group>"; };
+		1C69ED3D23C416420035C966 /* ffprobe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffprobe.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffprobe.c"; sourceTree = "<group>"; };
+		1C69ED3E23C416420035C966 /* ffmpeg_qsv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffmpeg_qsv.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffmpeg_qsv.c"; sourceTree = "<group>"; };
+		1C69ED3F23C416420035C966 /* cmdutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmdutils.h; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/cmdutils.h"; sourceTree = "<group>"; };
+		1C69ED4023C416420035C966 /* ffmpeg_videotoolbox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ffmpeg_videotoolbox.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/ffmpeg_videotoolbox.c"; sourceTree = "<group>"; };
+		1C69ED4123C416420035C966 /* cmdutils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cmdutils.c; path = "../../../../Users/coooo/yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools/cmdutils.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,18 +531,18 @@
 		1C69ECB123BF35C10035C966 /* fftools */ = {
 			isa = PBXGroup;
 			children = (
-				1C69ECB223BF35C10035C966 /* cmdutils.h */,
-				1C69ECB323BF35C10035C966 /* ffmpeg_opt.c */,
-				1C69ECB723BF35C10035C966 /* ffmpeg_cuvid.c */,
-				1C69ECB823BF35C10035C966 /* ffmpeg.h */,
-				1C69ECB923BF35C10035C966 /* ffplay.c */,
-				1C69ECBB23BF35C10035C966 /* ffmpeg_filter.c */,
-				1C69ECBC23BF35C10035C966 /* ffmpeg_hw.c */,
-				1C69ECBD23BF35C10035C966 /* ffprobe.c */,
-				1C69ECBE23BF35C10035C966 /* cmdutils.c */,
-				1C69ECBF23BF35C10035C966 /* ffmpeg_qsv.c */,
-				1C69ECC023BF35C10035C966 /* ffmpeg.c */,
-				1C69ECC123BF35C10035C966 /* ffmpeg_videotoolbox.c */,
+				1C69ED4123C416420035C966 /* cmdutils.c */,
+				1C69ED3F23C416420035C966 /* cmdutils.h */,
+				1C69ED3B23C416420035C966 /* ffmpeg_cuvid.c */,
+				1C69ED3A23C416420035C966 /* ffmpeg_filter.c */,
+				1C69ED3C23C416420035C966 /* ffmpeg_hw.c */,
+				1C69ED3623C416420035C966 /* ffmpeg_opt.c */,
+				1C69ED3E23C416420035C966 /* ffmpeg_qsv.c */,
+				1C69ED4023C416420035C966 /* ffmpeg_videotoolbox.c */,
+				1C69ED3823C416420035C966 /* ffmpeg.c */,
+				1C69ED3723C416420035C966 /* ffmpeg.h */,
+				1C69ED3923C416420035C966 /* ffplay.c */,
+				1C69ED3D23C416420035C966 /* ffprobe.c */,
 			);
 			name = fftools;
 			path = "../../../../../../yasm-1.2.0/FFmpeg-iOS-build-script/ffmpeg-4.2/fftools";
@@ -668,8 +678,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C69ED4823C416420035C966 /* ffprobe.c in Sources */,
+				1C69ED4323C416420035C966 /* ffmpeg.c in Sources */,
+				1C69ED4223C416420035C966 /* ffmpeg_opt.c in Sources */,
+				1C69ED4523C416420035C966 /* ffmpeg_filter.c in Sources */,
+				1C69ED4423C416420035C966 /* ffplay.c in Sources */,
 				1C69EBD823BF32510035C966 /* ViewController.m in Sources */,
 				1C69EBD223BF32510035C966 /* AppDelegate.m in Sources */,
+				1C69ED4923C416420035C966 /* ffmpeg_qsv.c in Sources */,
+				1C69ED4B23C416420035C966 /* cmdutils.c in Sources */,
+				1C69ED4623C416420035C966 /* ffmpeg_cuvid.c in Sources */,
+				1C69ED4A23C416420035C966 /* ffmpeg_videotoolbox.c in Sources */,
+				1C69ED4723C416420035C966 /* ffmpeg_hw.c in Sources */,
 				1C69EBE323BF32520035C966 /* main.m in Sources */,
 				1C69EBD523BF32510035C966 /* SceneDelegate.m in Sources */,
 			);
