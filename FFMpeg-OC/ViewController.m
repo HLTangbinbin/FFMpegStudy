@@ -16,6 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(100, 80, 60, 40);
+    [button setTitle:@"开动" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)test:(UIButton *)sender {
+    NSLog(@"******点击了按钮");
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"IMG_0951.MOV" ofType:nil];
     NSString *toFile = @"/Users/coooo/Desktop/Test.gif";
     NSString *commandStr = [NSString stringWithFormat:@"ffmpeg -i %@ %@",filePath,toFile];

@@ -19,7 +19,7 @@
 #ifndef AVUTIL_HWCONTEXT_QSV_H
 #define AVUTIL_HWCONTEXT_QSV_H
 
-#include <mfx/mfxvideo.h>
+//#include <mfx/mfxvideo.h>
 
 /**
  * @file
@@ -33,14 +33,14 @@
  * This struct is allocated as AVHWDeviceContext.hwctx
  */
 typedef struct AVQSVDeviceContext {
-    mfxSession session;
+//    mfxSession session;
 } AVQSVDeviceContext;
 
 /**
  * This struct is allocated as AVHWFramesContext.hwctx
  */
 typedef struct AVQSVFramesContext {
-    mfxFrameSurface1 *surfaces;
+//    mfxFrameSurface1 *surfaces;
     int            nb_surfaces;
 
     /**
