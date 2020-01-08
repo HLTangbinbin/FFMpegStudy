@@ -4872,18 +4872,18 @@ int ffmpeg_main(int argc, char **argv)
     /* parse options and open all input/output files */
     ret = ffmpeg_parse_options(argc, argv);
     if (ret < 0)
-        exit_program(1);
+        ffmpeg_cleanup(1);
 
     if (nb_output_files <= 0 && nb_input_files == 0) {
         show_usage();
         av_log(NULL, AV_LOG_WARNING, "Use -h to get full help or, even better, run 'man %s'\n", program_name);
-        exit_program(1);
+        ffmpeg_cleanup(1);
     }
 
     /* file converter / grab */
     if (nb_output_files <= 0) {
         av_log(NULL, AV_LOG_FATAL, "At least one output file must be specified\n");
-        exit_program(1);
+        ffmpeg_cleanup(1);
     }
 
     for (i = 0; i < nb_output_files; i++) {
@@ -4893,7 +4893,7 @@ int ffmpeg_main(int argc, char **argv)
 
     current_time = ti = get_benchmark_time_stamps();
     if (transcode() < 0)
-        exit_program(1);
+        ffmpeg_cleanup(1);
     if (do_benchmark) {
         int64_t utime, stime, rtime;
         current_time = get_benchmark_time_stamps();
@@ -4907,8 +4907,8 @@ int ffmpeg_main(int argc, char **argv)
     av_log(NULL, AV_LOG_DEBUG, "%"PRIu64" frames successfully decoded, %"PRIu64" decoding errors\n",
            decode_error_stat[0], decode_error_stat[1]);
     if ((decode_error_stat[0] + decode_error_stat[1]) * max_error_rate < decode_error_stat[1])
-        exit_program(69);
+        ffmpeg_cleanup(69);
 
-    exit_program(received_nb_signals ? 255 : main_return_code);
+    ffmpeg_cleanup(received_nb_signals ? 255 : main_return_code);
     return main_return_code;
 }

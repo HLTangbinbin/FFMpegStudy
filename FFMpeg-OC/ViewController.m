@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(100, 80, 60, 40);
+    button.frame = CGRectMake(150, 300, 60, 40);
     [button setTitle:@"开动" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(test:) forControlEvents:UIControlEventTouchUpInside];
@@ -27,20 +27,19 @@
 
 - (void)test:(UIButton *)sender {
     NSLog(@"******点击了按钮");
+     avformat_network_init();
+     AVFormatContext *avFormatContext = avformat_alloc_context();
+     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"IMG_0951.MOV" ofType:nil];
-    NSString *toFile = @"/Users/coooo/Desktop/Test.gif";
-    NSString *commandStr = [NSString stringWithFormat:@"ffmpeg -i %@ %@",filePath,toFile];
-    // 分割字符串
-    NSMutableArray *argvArr = [commandStr componentsSeparatedByString:@" "].mutableCopy;
-    //获取参数个数
-    int argc = (int)argvArr.count;
-    char **argv = calloc(argc, sizeof(char*));
-    for (int i=0; i<argc; i++) {
-        NSString *codeStr = argvArr[i];
-        argvArr[i] = codeStr;
-        argv[i] = (char *)[codeStr UTF8String];
-        ffmpeg_main(argc, argv);
-    }
+     if (avformat_open_input(&avFormatContext, [filePath UTF8String], NULL, NULL) != 0) {
+         av_log(NULL, AV_LOG_ERROR, "Couldn't open file");
+     }
+    
+     if (avformat_find_stream_info(avFormatContext, NULL) < 0) {
+         av_log(NULL, AV_LOG_ERROR, "Couldn't find stream information");
+     } else {
+         av_dump_format(avFormatContext, 0, [filePath cStringUsingEncoding:NSUTF8StringEncoding], NO);
+     }
 }
 
 
