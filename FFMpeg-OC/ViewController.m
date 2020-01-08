@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "ffmpeg.h"
+#import "avformat.h"
+
+
 @interface ViewController ()
 
 @end
@@ -30,7 +32,7 @@
      avformat_network_init();
      AVFormatContext *avFormatContext = avformat_alloc_context();
      
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"IMG_0951.MOV" ofType:nil];
+     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"IMG_0951.MOV" ofType:nil];
      if (avformat_open_input(&avFormatContext, [filePath UTF8String], NULL, NULL) != 0) {
          av_log(NULL, AV_LOG_ERROR, "Couldn't open file");
      }
